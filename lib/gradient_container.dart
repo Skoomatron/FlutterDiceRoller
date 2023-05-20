@@ -1,6 +1,5 @@
+import 'package:dice_roller/dice_roller.dart';
 import 'package:flutter/material.dart';
-import 'text_block.dart';
-
 
 const startAlignment = Alignment.bottomCenter;
 const endAlignment = Alignment.topCenter;
@@ -16,13 +15,10 @@ class GradientContainer extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
-            colors: [color1, color2],
-            begin: startAlignment,
-            end: endAlignment
-        ),
+            colors: [color1, color2], begin: startAlignment, end: endAlignment),
       ),
-      child: const Center(
-        child: TextBlock(Colors.white)
+      child: Center(
+        child: DiceRoller(),
       ),
     );
   }
